@@ -9,10 +9,9 @@ class ListColor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SafeArea(
+    return Scaffold(
+     appBar: AppBar(title: const Text("List View ")),
+     body: SafeArea(
           child: Container(
             color: Colors.blue,
             child: ListView(
@@ -34,7 +33,6 @@ class ListColor extends StatelessWidget {
             ),
           ),
         ),
-      ),
     );
   }
 }
