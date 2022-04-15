@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart' ;//show AppBar, BottomNavigationBar, BottomNavigationBarItem, BoxDecoration, BuildContext, Center, Colors, Drawer, DrawerHeader, FloatingActionButton, FontWeight, Icon, IconButton, Icons, InkWell, Key, ListTile, ListView, MaterialApp, MaterialPageRoute, Navigator, Scaffold, ScaffoldMessenger, SnackBar, State, StatefulWidget, StatelessWidget, Text, TextStyle, Widget, runApp;
+import 'listview.dart';
+import 'listcontainer.dart';
+import 'imagenetwork.dart';
 
-import 'package:flutter/material.dart';
  void main() {
   runApp(const MyApp());
 }
@@ -136,16 +139,28 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ),
             ListTile(
-              title: const Text("Menu Pertama"),
-              onTap: () {},
+              title: const Text("Menu ListView"),
+              onTap: () {
+                 Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => const ListColor()),
+                 );
+              },
             ),
             ListTile(
-              title: const Text("Menu Kedua"),
-              onTap: () {},
+              title: const Text("Menu Container"),
+              onTap: () {
+                 Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => const Containers()),
+                 );
+              },
             ),
             ListTile(
-              title: const Text("Menu Ketiga"),
-              onTap: () {},
+              title: const Text("Menu Networking Image"),
+              onTap: () {
+                Navigator.push(context,
+                 MaterialPageRoute(builder: (context) => const ImageAsset()),
+                 );
+              },
             )
           ],
         ),
@@ -203,7 +218,16 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
-        onTap: _onItemTapped,
+        onTap: _onItemTapped, 
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+            content: Text("Anda klik centang"),
+            duration: Duration(seconds: 1),
+          ));
+        },
+        child: const Icon(Icons.check),
       ),
     );
   }
