@@ -12,7 +12,7 @@ class ImageAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(title: const Text("Container dan Text Widget")),
+     appBar: AppBar(title: const Text("Network Image")),
           body: SafeArea(
             child: ListView.separated(
             separatorBuilder: (context,index) => const Divider(),
