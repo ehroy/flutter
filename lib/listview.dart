@@ -5,39 +5,9 @@ import 'classgridview.dart';
  void main() {
   runApp(const Listcolor());
 }
-class Listcolor extends StatelessWidget {
+class  Listcolor extends StatelessWidget {
   const Listcolor({ Key? key }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp (
-      debugShowCheckedModeBanner: false,
-      home : MyStatefulWidget(),
-      title: 'Fluter Basic Widgert',
-    );
-  }
-}
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold( 
-      appBar: AppBar(
-        leading: InkWell(child: const Icon(Icons.menu), onTap: (){}),
-        title: const Text('App Demo'),  
-      ),     
-    );
-  }
-
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({ Key? key }) : super(key: key);
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,10 +28,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ],
           ),
         ),
-      
-          
-
-
       appBar: AppBar(
         title: const Text("Grid View"),
         // leading: InkWell(child: const Icon(Icons.menu), onTap: (){}),
@@ -100,23 +66,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                         ),
                       ),
                     );
-
-
-
-
                   }
               ));
             },
           )
         ],
-      ),
-
-      
-      
-    );
-    
-
-
+      ), 
+    );  
   }
-  
 }

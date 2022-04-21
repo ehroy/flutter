@@ -46,28 +46,3 @@ class Homeassets extends StatelessWidget {
     );
   }
 }
-// import 'package:flutter/material.dart';
-
-
-// void main() {
-//   runApp(const Homeassets());
-// }
-
-
-// class Homeassets extends StatelessWidget {
-//   const Homeassets({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//      appBar: AppBar(title: const Text("Network Image")),
-//           body: SafeArea(
-//             child: Image.asset(
-//               'assets/image/icon_flutter.png',
-//               alignment: Alignment.bottomLeft,
-//               repeat: ImageRepeat.repeat,
-//             ),
-//         ),
-//     );
-//   }
-// }

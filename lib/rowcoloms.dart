@@ -11,62 +11,8 @@ class Rowcoloms extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp (
-      debugShowCheckedModeBanner: false,
-      home : MyStatefulWidget(),
-      title: 'Fluter Basic Widgert',
-    );
-  }
-}
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold( 
-      appBar: AppBar(
-        leading: InkWell(child: const Icon(Icons.menu), onTap: (){}),
-        title: const Text('App Demo'),  
-      ),     
-    );
-  }
-
-class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({ Key? key }) : super(key: key);
-
-  @override
-  State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-       body: SafeArea(
-        child: Center(
-          child: Container(
-            color: Colors.grey,
-            child: Row(
-              //silahkan anda ganti2 nilai MainAxisAlignment
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //silahkan anda ganti2 nilai CrossAxisAlignment
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const MyBox(),
-                const  MyBox(height: 100),
-                const MyBox(),
-              ],
-            ),
-          ),
-        ),
-      ),
-      
-          
-
-
-      appBar: AppBar(
-        title: const Text("Row"),
-        // leading: InkWell(child: const Icon(Icons.menu), onTap: (){}),
+   return Scaffold(
+      appBar: AppBar(title: const Text("Image Assets "),
         actions: <Widget>[ 
           IconButton(
             icon: const Icon(Icons.navigate_next),
@@ -88,32 +34,39 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                               //silahkan anda ganti2 nilai CrossAxisAignment
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                               const  MyBoxx(),
-                                const MyBoxx(width: 100),
-                                const MyBoxx(),
+                              const  MyBoxx(),
+                              const MyBoxx(width: 100),
+                              const MyBoxx(),
                               ],
                             ),
                           ),
                         ),
                       ),
                     );
-
-
-
-
                   }
               ));
             },
           )
         ],
       ),
-
-      
-      
+       body: SafeArea(
+        child: Center(
+          child: Container(
+            color: Colors.grey,
+            child: Row(
+              //silahkan anda ganti2 nilai MainAxisAlignment
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //silahkan anda ganti2 nilai CrossAxisAlignment
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                MyBox(),
+                MyBox(height: 100),
+                MyBox(),
+              ],
+            ),
+          ),
+        ),
+      ), 
     );
-    
-
-
   }
-  
 }
