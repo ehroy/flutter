@@ -15,7 +15,7 @@ class  Listcolor extends StatelessWidget {
           child: GridView.count(
             crossAxisCount: 3,
             crossAxisSpacing: 3,
-            mainAxisSpacing: 5,
+            mainAxisSpacing: 3,
             children: [
               MyGrid(text: "1", color: Colors.amber[100]),
               MyGrid(text: "2", color: Colors.amber[200]),
